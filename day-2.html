@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 2% 13%;
+            font-size: 1.3rem;
+        }
+        form{
+            display: block;
+        }
+        fieldset{
+            border: 3px solid black;
+        }
+        legend{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        label{
+            padding-bottom: 6px;
+            display: inline-block;
+        }
+        input{
+            font-size: 1.1rem;
+            padding: 1px;
+        }
+        .div-2{
+            display: inline-block;
+            display: flex;
+        }
+        .btn{
+            text-align: end;
+        }
+        button{
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Job Application Form</legend>
+
+            <p>Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the job Application Form. </p>
+            <div>
+                <label for="name">Name </label> <br>
+                <input type="text" id="fname" name="name" placeholder="First name" size="47%" required>
+                <input type="text" id="lname" name="name" placeholder="Last name" size="47%" required>
+            </div>
+            <br>
+            <div class="div-2">
+                <div style="width: 49%;">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email" size="45%" required>
+                </div>
+                <div style="width: 49%;">
+                    <label for="number">Phone number</label><br>
+                    <input type="number" name="number" id="number" size="49%" placeholder="Enter 11 digit phone number" pattern="[0-9]{11}" title="Enter 11 digit phone number">
+                </div>
+            </div>
+            <br>
+            <div class="div-2">
+                <div style="width: 49%;">
+                    <label for="position">What position are you applying for?</label><br>
+                    <select name="position" id="position" style="width: 49%; font-size: 1.1rem;">
+                        <option value="select" selected disabled>--select one--</option>
+                        <option value="jsd">Junior software developer</option>
+                        <option value="ssd">Senior software developer</option>
+                        <option value="pm">Project manager</option>
+                        <option value="mad">Mobile application developer</option>
+                    </select>
+                </div>
+                <div style="width: 49%;">
+                    <label for="date">Available date</label><br>
+                    <input type="date" id="date" name="date">
+                </div>
+            </div>
+            <br>
+            <label for="status">What is your employing status?</label><br>
+            <div id="status" style="display: flex;" >
+                
+                <div > 
+                    <input type="radio" id="employed" name="status">
+                    <label for="employed">Employed</label>
+                </div>
+                <div>
+                    <input type="radio" id="unemployed" name="status">
+                    <label for="unemployed">Unemployed</label>
+                </div>
+                <div>
+                    <input type="radio" id="self-employed" name="status">
+                    <label for="self-employed">Self-Employed</label>
+                </div>
+                <div>
+                    <input type="radio" id="student" name="status">
+                    <label for="student">Student</label>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="ref">Do you have reference? (Optional)</label><br>
+                <input type="text" id="ref" name="fname" placeholder="First name" size="47%">
+                <input type="text" id="ref" name="lname" placeholder="Last name" size="47%">
+
+            </div>
+            <br>
+            <div>
+                <label for="rmail">Reference Email</label> <br>
+                <input type="email" id="rmail" placeholder="Email" size="100%">
+            </div>
+            <br>
+            <div class="div-2">
+                <div style="width: 49%;">
+                    <label for="link">Enter youre resume link</label>
+                    <input type="url" id="link" name="link" placeholder="htpp://www.example.com." size="45%">
+                </div>
+                <div style="width: 49%;">
+                    <label for="photo">Upload your picture</label><br>
+                    <input type="file" id="photo" name="photo" >
+                </div>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" id="check" name="check">
+                <label for="check"> Do you agree with this?</label>
+            </div>
+            <div class="btn">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
